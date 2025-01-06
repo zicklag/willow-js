@@ -43,6 +43,10 @@ export class ReconcilerMap<
     >
   >();
 
+  forceReconcile() {
+    this.map.values().forEach((m) => m.values().forEach((r) => r.initiate()));
+  }
+
   addReconciler(
     aoiHandleOurs: bigint,
     aoiHandleTheirs: bigint,

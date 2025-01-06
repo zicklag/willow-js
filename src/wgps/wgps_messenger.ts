@@ -1678,4 +1678,8 @@ export class WgpsMessenger<
     this.closed = true;
     this.transport.close();
   }
+
+  forceReconcile() {
+    this.reconcilerMap.forceReconcile();
+  }
 }
